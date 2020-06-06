@@ -14,7 +14,7 @@ Python中GUI自动化工具介绍：
 	1.安装好python(建议使用python3.5以上的版本)  
 	2.确认pip 是否能正常使用  
   
-安装：
-	1.在线安装：pip install pywinauto  
+安装：  
+	1.在线安装：pip install pywinauto   
 	2.离线安装：python官网下载压缩包-解压压缩包-cmd进入文件夹中-运行 python setup.py install 进行安装  
 	
