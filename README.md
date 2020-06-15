@@ -1,5 +1,5 @@
 # python-pywinauto
-Windows窗体应用程序自动化  
+PC端自动化
 
 Python中GUI自动化工具介绍：  
   PyAutoGUi: 一个流行的跨平台库(只有基于图像的搜索功能,没有基于文本的控件操作)  
