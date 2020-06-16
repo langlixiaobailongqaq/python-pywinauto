@@ -39,5 +39,5 @@ app1 = Application("uia").connect(process=1292)
 # app1['任务栏']['运行中的应用程序'].print_control_identifiers()
 app1['任务栏'].print_control_identifiers()
 
-# 点击 运行中的应用程序-谷歌浏览器
+# 点击 运行中的应用程序-谷歌浏览器(尝试用 [用户提示通知区域]['Google Chrome - 1 个运行窗口']无法找到控件,改为用父窗体[任务栏])
 app1['任务栏']['Google Chrome - 1 个运行窗口'].click()
