@@ -17,4 +17,11 @@ Python中GUI自动化工具介绍：
 安装：  
 	1.在线安装：pip install pywinauto   
 	2.离线安装：python官网下载压缩包-解压压缩包-cmd进入文件夹中-运行 python setup.py install 进行安装  
+
+本人环境：  
+	1.win10系统;  
+	2.python3.5  
+	3.pywinauto 0.6.3   
+
+官方文档：pywinauto中文文档:https://www.kancloud.cn/gnefnuy/pywinauto_doc/1193047
 	
