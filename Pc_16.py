@@ -61,5 +61,5 @@ time.sleep(1)
 k.press_key(k.enter_key)
 k.press_key(k.enter_key)
 time.sleep(2)
-# 输入 python
+# 输入 python(只能英文，输入中文时失败)
 k.type_string('python')
