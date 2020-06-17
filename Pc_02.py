@@ -21,22 +21,3 @@ PC端程序自动化的切入点：
 		Desktop的作用范围可以跨进程。主要用于一个程序可以包含多个实例(进程)的程序。
 
 """
-
-from selenium import webdriver
-import pywinauto
-# 键盘操作模块
-from pykeyboard import PyKeyboard
-import time
-
-k = PyKeyboard()
-k.press_keys([k.windows_l_key, 'r'])
-time.sleep(1)
-# 输入cmd
-k.press_keys(['c', 'm', 'd'])
-time.sleep(1)
-# 回车
-k.press_key(k.enter_key)
-k.press_key(k.enter_key)
-time.sleep(2)
-# 输入 python
-k.type_string('朋友')
