@@ -28,14 +28,21 @@ dlg['地址: Admin'].click()
 k = PyKeyboard()
 # 输入图片文件夹地址(可以直接输入图片地址后回车,考虑到后期使用时可以作为两个变量，就分两步走)
 # k.type_string(r'C:\Users\Admin\Desktop\亚索图片\2.jpg')
-k.type_string(r"C:\Users\Admin\Desktop"+u"\亚索图片")
+# type_string不支持中文,建议改成英文文件夹名称
+k.type_string(r"C:\Users\Admin\Desktop\yasuo_images")
+time.sleep(1)
 
 # 回车
 k.press_key(k.enter_key)
 time.sleep(1)
+k.press_key(k.enter_key)
+time.sleep(1)
 
 # 选择文件名输入框
-# dlg["文件名(&N):Edit"].click()
-# k.type_string('2.jpg')
-# # 回车
-# k.press_key(k.enter_key)
+dlg["文件名(&N):Edit"].click()
+k.type_string('2.jpg')
+# 回车
+k.press_key(k.enter_key)
+
+# 点击 打开
+dlg['打开(&O)'].click()
