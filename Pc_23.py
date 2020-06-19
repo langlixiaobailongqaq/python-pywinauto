@@ -55,4 +55,4 @@ new_dlg['TButton'].click()
 new_dlg['确定'].click()
 time.sleep(2)
 
-# dlg.close()
+dlg.close()
