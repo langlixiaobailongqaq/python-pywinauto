@@ -16,14 +16,17 @@ from pywinauto import mouse
 
 # 启动 navicat
 app = pywinauto.Application("uia").start(r"D:\navicat112_premium_cs_x64\Navicat Premium\navicat.exe")
-app = pywinauto.Application(backend='uia').connect(process=7796)
+# app = pywinauto.Application(backend='uia').connect(process=14928)
 
 # 通过窗口标题去选择窗口
 dlg = app["Navicat Premium"]
+dlg.maximize()
 time.sleep(1)
 
 # 选择菜单
 menu = dlg["menu"]
+# menu.print_control_identifiers()
+
 # 选择菜单项：文件
 file = menu.child_window(title="文件", control_type="MenuItem")
 # 点击文件
