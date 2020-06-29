@@ -41,7 +41,7 @@ menu.item_by_path("文件->新建连接->MySQL...").click_input()
 new_dlg = app["MySQL - 新建连接"]
 # # new_dlg.print_control_identifiers()
 
-# 选择 常规
+# 选择常规
 new_dlg['常规'].print_control_identifiers()
 # 输入连接名
 new_dlg['常规'].Edit5.type_keys('test1')
