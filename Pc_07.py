@@ -8,6 +8,7 @@
 	5.关闭窗口：Dlg.close
 	6.获取窗口坐标：Dlg.rectangle()
 
+
 """
 from pywinauto.application import Application
 import pywinauto
