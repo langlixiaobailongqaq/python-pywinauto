@@ -9,6 +9,7 @@
 菜单项相关操作：
 	items：获取所有的子选项
 	click_input：点击菜单
+
 """
 
 from pywinauto.application import Application
