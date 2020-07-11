@@ -6,6 +6,7 @@
 	3.获取控件的子元素： children
 	4.获取控件类名：class_name
 	5.以字典形式返回控件的属性：get_properties
+
 """
 from pywinauto.application import Application
 
