@@ -5,7 +5,6 @@ PyAutoGUi: 一个流行的跨平台库(只有基于图像的搜索功能,没有�
 Lackey：    基于图像模式匹配。
 AXUI： MS UI Automation API控件的一个包装器。
 winGuiAuto： 一个使用Win32 Api的控件模块。
-
 Pywinauto ： 同时支持控件操作和图像操作，支持Win32 API和MS UI Automation API
 
 
