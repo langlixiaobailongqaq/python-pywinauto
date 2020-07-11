@@ -6,7 +6,6 @@
 
 """
 
-
 # 导入模块
 from pykeyboard import PyKeyboard
 import time
