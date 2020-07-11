@@ -2,7 +2,6 @@
 Pywinauto 打开指定的应用程序
 
 """
-
 # 1.打开 windows自带的记事本
 
 from pywinauto.application import Application
