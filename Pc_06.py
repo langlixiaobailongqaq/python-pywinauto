@@ -9,6 +9,7 @@ Pywinauto 选择指定的窗口：
 
 	# 非英文程序，推荐使用方式1
 """
+
 from pywinauto.application import Application
 import time
 
