@@ -1,11 +1,12 @@
 """
 
-项目实战之行为封装一
+项目实战之行为封装
 """
 
 import pywinauto
 from pywinauto import mouse
 import time
+from pykeyboard import PyKeyboard
 
 
 class NavicatTest:
@@ -99,19 +100,40 @@ class NavicatTest:
 		# 新建查询
 		self.app['上下文']['MenuItem1'].click_input()
 
+	def find_sql(self, database, title, sql):
+		"""查询sql"""
+		# print(self.app.windows())
+		title = '无标题 @{} ({}) - 查询 - Navicat Premium'.format(database, title)
+		find_dlg = self.app[title]
+		# find_dlg['TabControl'].Pane.print_control_identifiers()
+		# 获取编辑框
+		edit = find_dlg['TabControl'].Pane
+		# 获取编辑窗口控件位置
+		rect = edit.rectangle().mid_point()
+		mouse.click(coords=(rect.x, rect.y))
+		k = PyKeyboard()
+		# 输入sql语句
+		k.type_string("{}".format(sql))
+		time.sleep(1)
+		# 使用ctrl+r运行语句
+		mouse.click(coords=(rect.x, rect.y))
+		k.press_keys([k.control_key, 'r'])
 
 
-nav = NavicatTest(precess=4152)
+if __name__ == '__main__':
+	nav = NavicatTest(precess=4152)
+	# 新建连接
+	# nav.new_connect(title="test1", user='root', password='Zx123456')
+	# 打开连接
+	# nav.open_connect()
+	# 删除连接
+	# nav.del_connect()
+	# 关闭连接
+	# nav.close_connect(title='test1')
+	# 打开数据库
+	# nav.open_database(database='test')
+	# nav.new_find_sql()
 
-
-# 新建连接
-# nav.new_connect(title="test1", user='root', password='Zx123456')
-# 打开连接
-# nav.open_connect()
-# 删除连接
-# nav.del_connect()
-# 关闭连接
-# nav.close_connect(title='test1')
-# 打开数据库
-# nav.open_database(database='test')
-nav.new_find_sql()
+	# 查询数据
+	sql = "select * from students"
+	nav.find_sql('test', 'win', sql)
