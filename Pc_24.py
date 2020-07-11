@@ -22,8 +22,10 @@ dlg = app["Navicat Premium"]
 # # 获取数据库连接test1 中心点的位置 mid_point
 # rect = db_name.rectangle().mid_point()
 # print(rect.x, rect.y)
+# 鼠标在控件中心点，右击
+# mouse.right_click(coords=(rect.x, rect.y))
 
-# # 鼠标在控件中心点，右击(找不到树状视图控件,只能使用绝对坐标)
+# 找不到树状视图控件,只能使用绝对坐标然后点击
 # mouse.right_click(coords=(rect.x, rect.y))
 time.sleep(2)
 mouse.right_click(coords=(151, 325))
