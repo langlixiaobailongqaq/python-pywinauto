@@ -28,7 +28,6 @@ menu = dlg['Menu']
 # file = dlg['MenuItem']['文件']
 # file.print_control_identifiers()
 
-
 # 选择控件-方式三
 file = menu.child_window(title="文件", control_type="MenuItem")
 file.print_control_identifiers()
