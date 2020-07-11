@@ -15,6 +15,7 @@
 	1.注意：一定要操作进行完释放(松开)操作，否则会一直按着操作的键
 	2.官方文档资料：https://pypi.org/project/PyUserInput/
 	3.键盘对应的按键方法，可以ctrl+B 进入PyKeyboard类查看相关方法
+
 """
 
 # 导入模块
