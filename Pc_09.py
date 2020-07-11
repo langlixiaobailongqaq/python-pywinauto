@@ -13,6 +13,7 @@
 	Menultem：菜单项            Pane：窗格
 
 """
+
 from pywinauto.application import Application
 
 # 启动 navicat
