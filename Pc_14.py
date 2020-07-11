@@ -1,5 +1,4 @@
 """
-
 pywinauto中的等待机制2：timings 模块
 	wait_until方法：
 		参数：
