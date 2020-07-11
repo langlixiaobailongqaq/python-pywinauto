@@ -8,6 +8,7 @@
 	scroll：滚动鼠标
 
 """
+
 from pywinauto import mouse
 
 # 鼠标单击(默认左键)- 点击x轴坐标：214, y轴坐标：50
