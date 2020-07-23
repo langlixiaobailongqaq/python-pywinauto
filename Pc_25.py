@@ -24,6 +24,7 @@ class NavicatTest:
 		"""新建连接"""
 		# 通过窗口标题去选择窗口
 		dlg = self.app["Navicat Premium"]
+		dlg.maximize()
 		# 选择菜单
 		menu = self.dlg["menu"]
 		# menu.print_control_identifiers()
@@ -57,6 +58,11 @@ class NavicatTest:
 
 		# 点击确定
 		new_dlg['确定'].click()
+
+		print("窗口的数量：", len(self.app.windows()))
+		if len(self.app.windows()) > 2:
+			# 添加连接失败,需要关闭弹窗和添加连接的窗口
+				self.app['TWDialogForm'].close()
 
 	def open_connect(self):
 		"""打开连接(找不到控件,最好使用控件)"""
@@ -119,21 +125,36 @@ class NavicatTest:
 		mouse.click(coords=(rect.x, rect.y))
 		k.press_keys([k.control_key, 'r'])
 
+	def get_connect_count(self):
+		"""获取连接数量"""# TVTFilterFrame TVirtualStringTree(找不到控件：TVTFilterFrame)
+		print(self.dlg['TVTFilterFrame']['TVirtualStringTree'].child_window())
+		count = len(self.dlg['TVTFilterFrame'].children())
+		return count
+
+	def get_connect_names(self):
+		"""获取所有连接名"""
+		# 还是找不到控件：TVTFilterFrame
+		connects = self.dlg['TVTFilterFrame'].children()
+		# 获取连接名
+		names = [i.tests()[0] for i in connects]
+		return names
+
 
 if __name__ == '__main__':
-	nav = NavicatTest(precess=4152)
+	nav = NavicatTest(precess=1556)
 	# 新建连接
-	# nav.new_connect(title="test1", user='root', password='Zx123456')
+	nav.new_connect(title="test1", user='root', password='Zx123456')
 	# 打开连接
-	# nav.open_connect()
+	nav.open_connect()
 	# 删除连接
-	# nav.del_connect()
+	nav.del_connect()
 	# 关闭连接
-	# nav.close_connect(title='test1')
+	nav.close_connect(title='test1')
 	# 打开数据库
-	# nav.open_database(database='test')
-	# nav.new_find_sql()
+	nav.open_database(database='test')
+	nav.new_find_sql()
 
 	# 查询数据
 	sql = "select * from students"
 	nav.find_sql('test', 'win', sql)
+	nav.get_connect_count()
